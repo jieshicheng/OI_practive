@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481467027 source:e:\acm_practice\p64_practive\main.cpp
+	<iostream>
+	<vector>
+	<cmath>
+

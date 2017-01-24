@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1481045085 source:e:\acm_practice\p30_practice\main.cpp
+	<iostream>
+	<vector>
+

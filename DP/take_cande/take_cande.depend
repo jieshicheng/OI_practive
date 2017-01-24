@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481339878 source:e:\acm_practice\take_cande\main.cpp
+	<iostream>
+	<vector>
+	<cmath>
+

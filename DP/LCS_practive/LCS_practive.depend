@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1481252355 source:e:\acm_practice\lcs_practive\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	<cmath>
+
