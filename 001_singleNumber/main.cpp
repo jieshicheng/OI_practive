@@ -14,6 +14,7 @@ public:
             singleDog ^= *it;
         }
         return singleDog;
+ 
     }
 };
 
