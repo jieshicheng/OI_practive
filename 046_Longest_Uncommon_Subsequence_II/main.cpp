@@ -9,6 +9,30 @@ using namespace std;
 class Solution
 {
 public:
+    bool isSub(const string &s, const vector<string> &strs)
+    {
+        for(size_t i = 0; i != strs.size(); ++i)
+        {
+            if(s == strs[i])
+                continue;
+            size_t j = 0, k = 0;
+            while(j < s.size() && k < strs[i].size())
+            {
+                if(s[j] == strs[i][k])
+                {
+                    ++j;
+                    ++k;
+                }
+                else
+                    ++k;
+            }
+            if(j >= s.size())
+                return true;
+        }
+        return false;
+    }
+
+
     int findLUSlength(vector<string> &strs)
     {
         string index;
@@ -22,15 +46,9 @@ public:
         {
             if(r.second == 1)
             {
-                for(const auto &q : strs)
+                if( !isSub(r.first, strs) )
                 {
-                    if(r.first == q || r.first.size() > q.size())
-                        continue;
-                    size_t found = q.find(r.first);
-                    if(found == string::npos)
-                    {
-                        ans = max(ans, r.first.size());
-                    }
+                    ans = max(ans, r.first.size());
                 }
             }
         }
@@ -40,7 +58,7 @@ public:
 
 int main()
 {
-    vector<string> ans{"aaaa", "aaaa", "a", "aa"};
+    vector<string> ans{"aabbcc", "aabbcc", "abc", "dc"};
     Solution obj;
     cout<<obj.findLUSlength(ans)<<endl;
 	return 0;
