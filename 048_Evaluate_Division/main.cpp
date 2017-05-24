@@ -2,15 +2,15 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <tr1/unordered_map>
-#include <tr1/unordered_set>
+#include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 
 class Solution
 {
 public:
-    double searchPath(string a, string b, tr1::unordered_map<string, tr1::unordered_map<string, double>> &mp, tr1::unordered_set<string> &st)
+    double searchPath(string a, string b, unordered_map<string, unordered_map<string, double>> &mp, unordered_set<string> &st)
     {
         if(mp[a].find(b) != mp[a].end())
             return mp[a][b];
@@ -37,8 +37,8 @@ public:
                                 vector<pair<string, string>> queries)
     {
         vector<double> ans;
-        tr1::unordered_map<string, tr1::unordered_map<string, double>> mp;
-        tr1::unordered_set<string> st;
+        unordered_map<string, unordered_map<string, double>> mp;
+        unordered_set<string> st;
 
 
         size_t size = value.size();
