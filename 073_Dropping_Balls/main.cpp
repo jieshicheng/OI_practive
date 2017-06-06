@@ -33,7 +33,17 @@ public:
 
     //ways2
     int findLeaf(int deep, int number) {
-        
+        int k = 1;
+        for( int i = 0; i != deep - 1; ++i) {
+            if( number % 2) {
+                k = k * 2;
+                number = ( number + 1 ) / 2;
+            }else {
+                k = k * 2 + 1;
+                number /= 2;
+            }
+        }
+        return k;
     }
 
 };
@@ -41,7 +51,7 @@ public:
 int main() {
 	Solution obj;
     cout << obj.findIndex(3, 1) << endl;
-    
+    cout << obj.findLeaf(4, 2) << endl;   
     return 0;
 }
 
