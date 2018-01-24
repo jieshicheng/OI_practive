@@ -24,7 +24,6 @@ public:
 			    slow = nums[slow];
 			    fast = nums[nums[fast]];
 		    }   
-            cout << slow << endl;
 		    fast = 0;
 		    while (fast != slow)
 		    {
